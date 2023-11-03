@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
-background: pink;
+background: #9ae5f3;
 width: 280px;
 height: 100vh;
 position: fixed;
@@ -10,6 +10,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 gap: 1.5rem;
+
 h1{
     font-size: 1.5rem;
 }

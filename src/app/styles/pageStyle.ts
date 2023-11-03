@@ -70,15 +70,47 @@ img{
 .ButtonS{
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     gap: 2rem;
 }
 .Whats{
     width: 100%;
 }
 .WhatsH3{
-    padding: 8px;
+    padding: 5px;
     border-left: solid 2px black;
+}
+.ContainerHabilidades{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 15px;
+}
+.ContainerHab1{
+    background-color: aqua;
+    height: 260px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.ContainerHab2{
+    background-color: white;
+    height: 260px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.Habilidade{
+    height: 90%;
+    width: 300px;
+    background-color: beige;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    padding: 10px;
+    gap: 0.5rem;
 }
 `
 

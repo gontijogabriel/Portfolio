@@ -4,6 +4,9 @@ import { FaLinkedin } from 'react-icons/fa';
 import { BsFillPersonFill } from 'react-icons/bs';
 import { HiOutlineMail } from 'react-icons/hi';
 import { TbDeviceImacCode } from 'react-icons/tb';
+import { BsFillFileEarmarkPersonFill } from 'react-icons/bs';
+
+import Link from "next/link";
 
 export const Header = () => {
     return (
@@ -11,17 +14,18 @@ export const Header = () => {
             
             <h1>Gabriel Gontijo</h1>
             <img src="https://encurtador.com.br/lsuEP" alt="Foto de Perfil"/>
-            <p>Hi, my name is Simon Doe andm a senior software engineer. Welcome to my personal website!</p>
+            <p>Hi, my name is Gabriel and I'm a backend developer. Welcome to my personal website!</p>
             <div className="IconsLinks">
                 <AiOutlineGithub size={50}/>
                 <FaLinkedin size={50} />
             </div>
+
             <nav className="">
                 <ul>
-                    <li><BsFillPersonFill size={25}/>Sobre mim</li>
-                    <li><TbDeviceImacCode size={25}/>Projetos</li>
-                    <li>Curriculo</li>
-                    <li><HiOutlineMail size={25}/>Contato</li>
+                    <Link href={'#SobreMimID'}><li><BsFillPersonFill size={25}/>Sobre mim</li></Link>
+                    <Link href={'#ProjetosID'}><li><TbDeviceImacCode size={25}/>Projetos</li></Link>
+                    <Link href={'#CurriculoID'}><li><BsFillFileEarmarkPersonFill size={25}></BsFillFileEarmarkPersonFill>Curriculo</li></Link>
+                    <Link href={'#ContatoID'}><li><HiOutlineMail size={25}/>Contato</li></Link>
                 </ul>
             </nav>
 
