@@ -1,11 +1,10 @@
 'use client'
-import { Inter } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 import { Header } from './components/Header'
 import { GlobalStyles } from './styles/styles'
-import { StyleRegistry } from 'styled-jsx'
-import styled from 'styled-components'
+import StyledComponentsRegistry from './registry'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Roboto({ subsets: ['latin'], weight:"400" })
 
 export default function RootLayout({
   children,
@@ -15,11 +14,12 @@ export default function RootLayout({
   return (
     <html lang="en"  style={{scrollBehavior:'smooth'}}>
         <body className={inter.className}>
-          <StyleRegistry>
+          <StyledComponentsRegistry>
+
             <Header/>
               {children}
             <GlobalStyles/>
-          </StyleRegistry>
+          </StyledComponentsRegistry>
         </body>
     </html>
   )

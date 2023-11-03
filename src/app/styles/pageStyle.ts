@@ -25,7 +25,10 @@ padding: 35px;
 .Projetos{
     height: 100vh;
     width: 100%;
-    background-color: black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .Curriculo{
     height: 100vh;
@@ -111,6 +114,17 @@ img{
     justify-content: center;
     padding: 10px;
     gap: 0.5rem;
+    border-radius: 12px;
 }
+.ProjetosHead{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 800px;
+    background-color: aqua;
+}
+
 `
 

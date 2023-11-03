@@ -3,8 +3,13 @@ import { PageContainer, PageContent } from './styles/pageStyle'
 import { BiLogoFlask } from 'react-icons/bi';
 import { SiDjango } from 'react-icons/si';
 import { FaPython } from 'react-icons/fa';
+import { GrMysql } from 'react-icons/gr';
+import { TbSql } from 'react-icons/tb';
+import { DiMsqlServer } from 'react-icons/di';
 
-export default function Home () {
+import Link from 'next/link';
+
+export default function Home() {
   return (
     <PageContainer>
       <PageContent>
@@ -31,20 +36,20 @@ export default function Home () {
               <div className="ContainerHab1">
 
                 <div className="Habilidade">
-                  <FaPython size={90} />
+                  <FaPython size={90} color={'#306998'} />
                   <h2>Python</h2>
                   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel doloremque accusamusadipisicing elit. Vel doloremque accusamus</p>
                 </div>
 
                 <div className="Habilidade">
-                  <SiDjango size={90} />
+                  <SiDjango size={90} color={'#092e20'} />
                   <h2>Django</h2>
                   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel doloremque accusamusadipisicing elit. Vel doloremque accusamus</p>
                 </div>
 
                 <div className="Habilidade">
                   <BiLogoFlask size={90} />
-                  <h2>Flask</h2>
+                  <h2>Python</h2>
                   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel doloremque accusamusadipisicing elit. Vel doloremque accusamus</p>
                 </div>
 
@@ -52,21 +57,21 @@ export default function Home () {
 
               <div className="ContainerHab2">
 
-              <div className="Habilidade">
-                  <FaPython size={90} />
-                  <h2>Python</h2>
+                <div className="Habilidade">
+                  <TbSql size={90} />
+                  <h2>SQL</h2>
                   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel doloremque accusamusadipisicing elit. Vel doloremque accusamus</p>
                 </div>
 
                 <div className="Habilidade">
-                  <SiDjango size={90} />
-                  <h2>Django</h2>
+                  <DiMsqlServer size={90} />
+                  <h2>SQL Server</h2>
                   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel doloremque accusamusadipisicing elit. Vel doloremque accusamus</p>
                 </div>
 
                 <div className="Habilidade">
-                  <BiLogoFlask size={90} />
-                  <h2>Flask</h2>
+                  <GrMysql size={90} />
+                  <h2>MySQL</h2>
                   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel doloremque accusamusadipisicing elit. Vel doloremque accusamus</p>
                 </div>
 
@@ -79,6 +84,16 @@ export default function Home () {
 
 
         <div className="Projetos" id='ProjetosID'>
+
+          <div className="ProjetosContainer">
+
+            <div className="ProjetosHead">
+              <h1>Projetos</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nulla aliquid repellat quis architecto atque dolorem dolores voluptatibus, quia labore consequatur? Soluta</p>
+              <button>Contato</button>
+            </div>
+
+          </div>
 
         </div>
 

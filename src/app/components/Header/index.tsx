@@ -16,8 +16,8 @@ export const Header = () => {
             <img src="https://encurtador.com.br/lsuEP" alt="Foto de Perfil"/>
             <p>Hi, my name is Gabriel and I'm a backend developer. Welcome to my personal website!</p>
             <div className="IconsLinks">
-                <AiOutlineGithub size={50}/>
-                <FaLinkedin size={50} />
+                <Link href={'https://github.com/gontijogabriel'} target="_blank"><AiOutlineGithub size={50}/></Link>
+                <Link href={'https://www.linkedin.com/in/gontijogabriel/'} target="_blank"><FaLinkedin size={50}/></Link>
             </div>
 
             <nav className="">
@@ -32,6 +32,7 @@ export const Header = () => {
             <div className="DarkMode">
                 button
             </div>
+            
         </HeaderContainer>
     )
 }
