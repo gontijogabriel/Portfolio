@@ -43,17 +43,14 @@ body {
 }
 .menu-link {
     text-decoration: none;
-    /* color: #f0f7da; */
+    color: #2b2726;
     border-radius: 10px;
     padding: 10px;
     font-family: 'Roboto Mono', monospace;
     font-weight: 300;
 }
 .menu-link:hover {
-    text-decoration: none;
-    color: black;
-    background-color: #f0f7da54;
-    padding: 10px;
+    background-color: #2b27261a;
     cursor: pointer;
 }
 .main-container {
@@ -123,6 +120,7 @@ body {
 }
 .descricao p {
     line-height: 25px;
+    text-indent: 50px;
 }
 .skills {
     width: 100%;
@@ -238,5 +236,11 @@ svg:hover {
     }
     .footer-container {
         min-height: 100px;
+    }
+    .descricao p {
+        padding: 10px;
+    }
+    .skills {
+        padding: 15px 0;
     }
 }
