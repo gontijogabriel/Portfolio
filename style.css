@@ -216,6 +216,11 @@ svg:hover {
     }
     .titulo p {
         font-size: 25px;
+        font-family: 'Comfortaa', sans-serif;
+        font-family: 'DM Sans', sans-serif;
+        font-family: 'IBM Plex Mono', monospace;
+        font-family: 'Merriweather Sans', sans-serif;
+        font-family: 'Montserrat', sans-serif;
     }
     
     .skill {
