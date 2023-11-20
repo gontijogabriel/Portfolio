@@ -1,70 +1,80 @@
 * {
     margin: 0;
     padding: 0;
+}
+body {
+    height: 100vh;
     overflow: hidden;
 }
-/* ----- HEADER -----*/
-header {
-    width: 100%;
-    height: 100px;
-    display: flex;
+.header-container {
     max-width: 1280px;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    background-color: rgba(250, 235, 215, 0.486);
-    border-bottom: 1px solid black;
+    height: 90px;
+    display: flex;
+    margin: auto;
+    background-color: transparent;
+    border-bottom: 2px solid #221a18;
 }
-.h-logo {
-    width: 15%;
+.logo {
+    display: flex;
+    align-items: center;
+    width: 10%;
+    justify-content: start;
     height: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.h-logo h1 {
-    font-size: 3rem;
-}
-.h-links {
-    width: 85%;
-}
-.h-ul-links {
-    list-style: none;
-    display: flex;
-    gap: 3rem;
-    justify-content: end;
-    padding-right: 50px;
-}
-.h-l-children {
+.logo a {
     text-decoration: none;
+    color: #2b2726;
+    font-family: 'Noto Serif Old Uyghur', serif;
+    font-family: 'Work Sans', sans-serif;
+}
+.menu {
     display: flex;
-    padding: 10px;
     align-items: center;
-    justify-content: center;
+    width: 90%;
+    justify-content: end;
+    font-family: 'Courier New', Courier, monospace;
 }
-.h-l-children:hover {
-    background-color: rgba(0, 255, 255, 0.39);
+.links {
+    display: flex;
+    gap: 5rem;
+    list-style: none;
 }
-/* ----- FIM HEADER -----*/
-
-/* ----- MAIN -----*/
-main {
-    background-color: aqua;
-    width: 100%;
+.menu-link {
+    font-weight: 300;
+}
+.menu-link:hover {
+    background-color: #2b27261a;
+    padding: 10px;
+    cursor: pointer;
+}
+.main-container {
     max-width: 1280px;
     height: calc(100vh - 180px);
-    margin: 0 auto;
+    margin: auto;
 }
-.intro {
-    background-color: rgb(167, 53, 76);
+.page {
+    display: none;
+}
+.page.active {
+    display: block;
+}
+
+#about-page {
+    width: 100%;
+    height: 100%;
+    color: #2b2726;
+}
+.intro-1 {
     width: 100%;
     height: 50%;
     display: flex;
 }
 .foto {
-    background-color: rgb(240, 102, 102);
     width: 40%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,128 +83,213 @@ main {
     width: 70%;
     border-radius: 50%;
 }
-.recepcao {
-    background-color: rgb(146, 179, 168);
+.titulo {
     width: 60%;
-    padding-left: 50px;
+    height: 100%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 2rem;
 }
-.recepcao p {
-    line-height: 65px;
-    font-size: 2.5rem;
+.titulo p {
+    line-height: 50px;
+    font-size: 2rem;
+    font-family: 'Comfortaa', sans-serif;
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
-.descricao {
-    background-color: rgb(136, 99, 106);
+.intro-2 {
     width: 100%;
     height: 50%;
 }
-
-
-
-/* ----- FIM MAIN -----*/
-
-/* ----- FOOTER -----*/
-footer {
-    background-color: rgb(43, 43, 92);
+.descricao {
     width: 100%;
-    max-width: 1280px;
-    height: 76px;
-    margin: 0 auto;
-    border-top: 1px solid black;
+    height: 50%;
     display: flex;
-}
-.copy {
-    width: 60%;
-    background-color: rgb(170, 94, 0);
-    display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: start;
-    padding-left: 50px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Mono', monospace;
 }
-.social {
-    background-color: rgb(0, 90, 168);
-    width: 40%;
-    height: 100%;
-    display: flex;
-    justify-content: end;
-    padding-right: 50px;
-    gap: 2rem;
+.descricao p {
+    line-height: 25px;
+    text-indent: 50px;
 }
-.social img {
+.skills {
+    width: 100%;
+    min-height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    background-color: bisque;
 }
-/* ----- FIM FOOTER -----*/
+.skill {
+    display: flex;
+    gap: 2.2rem;
+}
 
-/* MOBILE */
+/* PAGINA PROJETOS */
+#projects-page {
+    width: 100%;
+    height: 100%;
+}
+.projects-container {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: start;
+    padding: 30px;
+    gap: 1rem;
+}
+.project {
+    width: 500px;
+    height: 410px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+.project-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+}
+.project img {
+    width: 100%;
+}
+.project-descricao {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+hr {
+    border-color:#221a18;
+}
+.svg-icon {
+    transition: 0.1s;
+}
+.svg-icon:hover {
+    scale: 1.2;
+}
+.footer-container {
+    max-width: 1280px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid #2b2726;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.sociais svg {
+    width: 50px;
+    height: 30px;
+}
+
+/* Estilos para dispositivos móveis */
 @media (max-width: 600px) {
-    /* ----- HEADER -----*/
-    header {
+    body {
+        overflow: scroll;
+    }
+    .header-container {
+        max-width: 600px;
         display: flex;
+        align-items: center;
+        justify-content: center;
     }
-    .h-logo {
-        width: 30%;
+    .logo {
+        padding: 0 35px;
+        height: 100%;
     }
-    .h-links {
-        width: 70%;
+    .menu {
+        overflow-x: hidden;
+        height: 100%;
     }
-    /* ----- FIM HEADER -----*/
-    /* ----- MAIN -----*/
-    main {
-        background-color: rgb(113, 119, 119);
+    .links {
         width: 100%;
-        max-width: 1280px;
-        /* height: calc(100vh - 200px); */
-
-        margin: 0 auto;
-    }
-    .intro {
+        height: 100%;
         display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+    }
+    .menu-link {
+        font-size: 1.15rem;
+    }
+    .menu-link:hover {
+        background-color: #2b27261a;
+        border-radius: 3px;
+    }
+    .intro-1 {
+        height: auto;
         flex-direction: column;
         align-items: center;
-        width: 100%;
-        height: 50%;
+        justify-content: center;
+        padding: 20px 0;
     }
     .foto {
-        height: 100%;
+        width: 300px;
     }
-    .recepcao {
-        width: 100%;
-        height: 100%;
-    }
-    .recepcao p {
-        line-height: 45px;
-        font-size: 2.0rem;
+    .titulo {
         text-align: center;
     }
-    /* ----- FIM MAIN -----*/
-    /* ----- FOOTER -----*/
-    footer {
-        width: 100%;
-        height: 100%;
+    .titulo p {
+        font-size: 25px;
+        font-family: 'Comfortaa', sans-serif;
+        font-family: 'DM Sans', sans-serif;
+        font-family: 'IBM Plex Mono', monospace;
+        font-family: 'Merriweather Sans', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .skill {
+        height: auto;
         display: flex;
         flex-direction: column;
-    }
-    .copy {
-        width: 100%;
-        display: flex;
-        justify-content: center;
         align-items: center;
-        padding: 5px;
     }
-    .social {
-        width: 100%;
-        height: 100%;
+    .svg-icon {
+        transition: 0.1s;
+        min-width: 300px;
+    }
+    .svg-icon:hover {
+        scale: 1.2;
+    }
+    .main-container {
+        height: auto;
+    }
+    .descricao p {
+        padding: 10px;
+    }
+    .skills {
+        padding: 15px 0;
+    }
+    .footer-container {
         display: flex;
         align-items: center;
-        justify-content: center;
+        flex-direction: column;
+        min-height: 100px;
     }
-    .social img {
+    .sociais {
+        width: 100px;
+        display: flex;
+    }
+    .sociais svg {
         height: 70px;
     }
-    /* ----- FIM FOOTER -----*/
+    .project {
+        width: 400px;
+        height: 330px;
+    }
 }
