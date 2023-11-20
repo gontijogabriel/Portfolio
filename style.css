@@ -41,12 +41,7 @@ body {
     gap: 5rem;
     list-style: none;
 }
-.menu-link {
-    text-decoration: none;
-    color: #2b2726;
-    border-radius: 10px;
-    padding: 10px;
-    font-family: 'Roboto Mono', monospace;
+.menu-link {transparent
     font-weight: 300;
 }
 .menu-link:hover {
@@ -228,9 +223,19 @@ hr {
     body {
         overflow: scroll;
     }
+    .header-container {
+        max-width: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .logo {
         padding: 0 35px;
         height: 100%;
+    }
+    .menu {
+        background-color: antiquewhite;
+        overflow-x: hidden;
     }
     .links {
         width: 100%;
