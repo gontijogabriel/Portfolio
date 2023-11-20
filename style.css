@@ -41,7 +41,7 @@ body {
     gap: 5rem;
     list-style: none;
 }
-.menu-link {transparent
+.menu-link {
     font-weight: 300;
 }
 .menu-link:hover {
