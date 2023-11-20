@@ -35,6 +35,7 @@ body {
     align-items: center;
     width: 90%;
     justify-content: end;
+    font-family: 'Courier New', Courier, monospace;
 }
 .links {
     display: flex;
@@ -46,6 +47,7 @@ body {
 }
 .menu-link:hover {
     background-color: #2b27261a;
+    padding: 10px;
     cursor: pointer;
 }
 .main-container {
@@ -234,8 +236,8 @@ hr {
         height: 100%;
     }
     .menu {
-        background-color: antiquewhite;
         overflow-x: hidden;
+        height: 100%;
     }
     .links {
         width: 100%;
@@ -247,6 +249,10 @@ hr {
     }
     .menu-link {
         font-size: 1.15rem;
+    }
+    .menu-link:hover {
+        background-color: #2b27261a;
+        border-radius: 3px;
     }
     .intro-1 {
         height: auto;
