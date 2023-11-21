@@ -66,22 +66,32 @@ body {
     width: 100%;
     height: 100%;
     color: #2b2726;
+    overflow-x: hidden;
 }
 .intro-1 {
     width: 100%;
     height: 50%;
     display: flex;
+    padding: 20px;
 }
 .foto {
-    width: 40%;
+    min-width: 300px;
+    min-height: 100px;
+    width: 50%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .foto img {
-    width: 70%;
+    max-width: 300px;
+    max-height: 300px;
+    width: 100%;
+    height: 100%;
+    min-width: 200px;
+    min-height: 200px;
     border-radius: 50%;
+    background-color: antiquewhite;
 }
 .titulo {
     width: 60%;
@@ -190,6 +200,7 @@ hr {
 .svg-icon:hover {
     scale: 1.2;
 }
+
 .footer-container {
     max-width: 1280px;
     min-height: 100px;
