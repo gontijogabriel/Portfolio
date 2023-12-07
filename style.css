@@ -20,7 +20,7 @@ a {
     width: 100%;
     background-color: #262626;
     color: #A6A6A6;
-    height: 80px
+    height: 80px;
 }
 .header-container {
     width: 80%;
@@ -50,9 +50,12 @@ a {
     align-items: center;
     justify-content: center;
     color: #A6A6A6;
-    /* background: url('img/background-dev-gif.gif') no-repeat;
-    background-color: rgba(0, 0, 0, 0.1);
-    background-blend-mode: color;*/
+    background: url('img/background-dev-gif.gif') no-repeat;
+    background-color: rgba(0, 0, 0, 0.9);
+    background-blend-mode: color;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 } 
 .about-container {
     width: 80%;
@@ -99,5 +102,67 @@ a {
     display: inline-block;
     width: 150px;
     height: 150px;
+    background-color: #A6A6A6;
+    padding: 5px;
+    border-radius: 10px;
 }
 /* Fim About */
+
+@media only screen and (max-width: 900px) {
+    /* Ajustes de estilo para dispositivos móveis */
+
+    /* Exemplo: Redefinir larguras e centralizar texto no header */
+    #header {
+        height: auto; /* Ajuste a altura conforme necessário */
+        display: flex;
+    }
+
+    .header-logo {
+        font-size: 2rem; /* Ajuste o tamanho da fonte conforme necessário */
+    }
+
+    .menu-ul {
+        height: 90px; /* Empilhar os itens do menu verticalmente */
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-ul li {
+        padding: 10px;
+        text-align: center; /* Centralizar o texto do menu */
+    }
+
+    #about {
+        height: auto;
+    }
+    .about-intro {
+        display: flex;
+        flex-direction: column;
+    }
+    .about-container {
+        padding: 20px;
+    }
+    /* Exemplo: Ajustes no texto de introdução na seção About */
+    .about-intro-text {
+        font-size: 1.5rem; /* Ajuste o tamanho da fonte conforme necessário */
+        text-align: center;
+    }
+
+    .about-img img {
+        max-width: 150px; /* Ajuste o tamanho da imagem conforme necessário */
+    }
+
+    /* Exemplo: Redefinir estilos da grade de habilidades */
+    .about-skills {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skill-img {
+        width: 100px; /* Ajuste o tamanho da imagem conforme necessário */
+        height: 100px;
+    }
+
+    /* Adicione outros ajustes conforme necessário */
+}
