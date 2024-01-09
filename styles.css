@@ -3,6 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemon&family=Rubik+Maps&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lemon&family=Rubik+Maps&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lemon&family=Rubik+Doodle+Shadow&family=Rubik+Maps&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -15,51 +17,40 @@ body {
     margin: 0 auto;
 }
 
-a {text-decoration: none;}
+a {text-decoration: none; color: black;}
 li {list-style: none;}
 
 .header {
+    display: flex;
     width: 100%;
     height: 100px;
-    display: flex;
-    border-bottom: 1px solid black;
-}
-.logo {
-    width: 50%;
-    display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
 }
-.logo h1 {
-    font-family: 'Noto Serif Old Uyghur', serif;
-    font-size: 3rem;
-    font-weight: 900;
+.header h1 {
+    margin: 20px;
+    font-size: 3.5rem;
+    text-align: center;
+}
+.header button {
+    margin: 20px;
+    display: none;
 }
 .menu {
-    width: 100%;
     display: flex;
-    align-items: end;
+    gap: 2rem;
+    margin: 0 20px;
     justify-content: end;
-    gap: 2.5rem;
-    /* padding: 20px; */
+    border-bottom: 1px solid black;
 }
-.menu li {
+.menu a {
     padding: 10px;
-    list-style: none;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
 }
-
-.menu li:hover {
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-    background-color: #3333;
+.menu a:hover {
+    background-color: #33333333;
 }
-.menu li a {
-    padding: 10px;
-    border-radius: 12px;
-    color: black;
-}
-
-
 
 .container-sobre {
     display: flex;
@@ -75,17 +66,18 @@ li {list-style: none;}
 }
 .foto img {
     width: 100%;
-    min-width: 250px;
+    min-width: 100px;
     border-radius: 50%;
 }
 .descricao {
-    padding: 20px;
+    padding: 5px 50px;
     display: flex;
     justify-content: center;
     align-items: start;
     flex-direction: column;
     gap: 1rem;
     font-size: 1.5rem;
+    font-family: 'Salsa', cursive;
 }
 .descricao p {
     font-family: 'Lemon', serif;
@@ -109,7 +101,7 @@ li {list-style: none;}
 }
 .exp-profissional {
     width: 60%;
-    min-width: 450px;
+    min-width: 300px;
     background-color: #33333333;
     border-radius: 8px;
     padding: 20px;
@@ -119,7 +111,6 @@ li {list-style: none;}
 .exp-profissional ul {
     padding: 10px 0;
 }
-
 
 .container-experiencia {
     display: flex;
@@ -227,5 +218,33 @@ li {list-style: none;}
     }
     .sobre-saibamais {
         margin: 0 20px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .header button {
+        display: block;
+    }
+    .menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        border-top: 1px solid black;
+        padding: 10px;
+        transition: opacity 0.3s ease-in-out;
+    }
+    .menu.show {
+        display: flex;
+        pointer-events: auto;
+    }
+    .menu a {
+        padding: 10px;
+        border-radius: 12px;
+        background-color: #33333333;
+    }
+    .descricao {
+        text-align: center;
     }
 }
