@@ -109,6 +109,9 @@ li {list-style: none;}
 .contato img {
     width: 50px;
 }
+.informacoes {
+    font-size: 1rem;
+}
 
 .sobre-saibamais {
     max-width: 800px;
