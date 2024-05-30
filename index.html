@@ -3,51 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gabriel Gontijo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="title">
-            Portfólio Gabriel Gontijo - index.html
-        </div>
+        <p class="tittle">Portfólio Gabriel Gontijo - index.html</p>
     </header>
     <nav class="paginas">
-        <a href="" class="link m-active">hello.html</a>
-        <a href="" class="link">about.html</a>
-        <a href="" class="link">projects.html</a>
+        <a class="link m-active" onclick="changePage(event, 'hello')">hello_world</a>
+        <a class="link" onclick="changePage(event, 'about')">about_me</a>
+        <a class="link" onclick="changePage(event, 'projects')">projects</a>
     </nav>
 
-    <main id="hello">
-        <h1>Hello Page</h1>
-    </main>
+    <main>
+        <section id="hello">
+            
+        </section>
 
-    <main id="about">
-        <h1>About Page</h1>
-    </main>
+        <section id="about">
+            <h2>About Page</h2>
+        </section>
 
-    <main id="projects">
-        <h1>Projects Page</h1>
+        <section id="projects">
+            <h2>Projects Page</h2>
+        </section>
     </main>
 
     <footer>
-        <p>Conecte-se comigo!</p>
+
         <div class="icons">
+            <p>conecte-se comigo :)</p>
             <div class="icon">
-                <img src="img/icons/linkedin_icon.svg" alt="">
+                <img src="img/icons/linkedin_icon.svg" alt="LinkedIn Icon">
             </div>
             <div class="icon">
-                <img src="img/icons/github_icon.svg" alt="">
+                <img src="img/icons/github_icon.svg" alt="GitHub Icon">
             </div>
             <div class="icon">
-                <img src="img/icons/gmail-icon.svg" alt="">
+                <img src="img/icons/gmail-icon.svg" alt="Gmail Icon">
             </div>
             <div class="icon">
-                <img src="img/icons/whatsapp_icon.svg" alt="">
+                <img src="img/icons/whatsapp_icon.svg" alt="WhatsApp Icon">
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        function changePage(event, name) {
+            event.preventDefault();
+
+            const links = document.querySelectorAll('.paginas .link');
+            links.forEach(link => link.classList.remove('m-active'));
+
+            event.currentTarget.classList.add('m-active');
+
+            const sections = document.querySelectorAll('main section');
+            sections.forEach(section => section.style.display = 'none');
+
+            document.getElementById(name).style.display = 'block';
+        }
+    </script>
 </body>
 </html>
