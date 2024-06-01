@@ -1,89 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gabriel Gontijo</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<style>
- 
-</style>
 <body>
     <header>
-        <p class="tittle">Portfólio Gabriel Gontijo - index.html</p>
+        <nav id="menu-header" class="menu">
+            <a href="#main-home" class="activate">Home</a>
+            <a href="#main-about">About</a>
+            <a href="#main-projects">Projects</a>
+        </nav>
     </header>
-    <nav class="paginas">
-        <a class="link m-active" onclick="changePage(event, 'hello')">hello_world</a>
-        <a class="link" onclick="changePage(event, 'about')">about_me</a>
-        <a class="link" onclick="changePage(event, 'projects')">projects</a>
-    </nav>
 
-    <main>
-
-        <section id="hello">
-            <div class="main-hello">
-                <div class="rows">
-                    <div class="line"></div>
-                    <div class="line" style="height: 70%;"></div>
-                    <div class="line" style="height: 40%;"></div>
-                    <div class="line" style="height: 45%;"></div>
-                    <div class="line" style="height: 25%;"></div>
-                </div>
-                <div class="hello">
-                    <h4>Hello! I am</h4>
-                    <h1>Gabriel Gontijo</h1>
-                    <h3>I am a full stack developer</h3>
-                </div>
-                <img class="img-perfil" src="fotodeperfil-removebg-preview.png" alt="">
-            </div>
+    <main id="main-home">
+        <section class="foto-perfil">
+            <img class="img-perfil" src="fotodeperfil-removebg-preview.png" alt="Foto de perfil de Gabriel Gontijo">
         </section>
-
-        <section id="about">
-            <div class="sidebar">
-                <h1>About</h1>
-                <div class="sb-links">
-                    <a class="sb-link sb-active" onclick="changeAboutLink(event, 'biography')">> Biography</a>
-                    <a class="sb-link" onclick="changeAboutLink(event, 'experience')">> Experience</a>
-                    <a class="sb-link" onclick="changeAboutLink(event, 'education')">> Education</a>
-                    <a class="sb-link" onclick="changeAboutLink(event, 'skills')">> Skills</a>
-                    <a class="sb-link" onclick="changeAboutLink(event, 'extra')">> Extra</a>
-                </div>
-            </div>
-
-            <div class="main-about">
-                <div id="biography">
-                    Biography
-                </div>
-
-                <div id="experience">
-                    Experience
-                </div>
-
-                <div id="education">
-                    Education
-                </div>
-
-                <div id="skills">
-                    Skills
-                </div>
-
-                <div id="extra">
-                    Extra
-                </div>
-            </div>
-        </section>
-
-        <section id="projects">
-
+        <section class="hello">
+            <h2>Hello, I am</h2>
+            <h1>Gabriel Gontijo</h1>
+            <h3>Full Stack Developer</h3>
         </section>
     </main>
 
-    <footer>
+    <main id="main-about">
+        <h1>ABOUT</h1>
+    </main>
 
-        <div class="icons">
-            <p>conecte-se comigo :)</p>
+    <main id="main-projects">
+        <h1>PROJECTS</h1>
+    </main>
+
+    <footer>
+        <div class="sociais">
             <div class="icon">
                 <img src="img/icons/linkedin_icon.svg" alt="LinkedIn Icon">
             </div>
@@ -100,36 +52,28 @@
     </footer>
 
     <script>
-        function changePage(event, name) {
-            event.preventDefault();
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuLinks = document.querySelectorAll('#menu-header a');
+            const mains = document.querySelectorAll('main');
 
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetMain = document.getElementById(targetId);
+
+                    menuLinks.forEach(link => link.classList.remove('activate'));
+
+                    this.classList.add('activate');
+                   
+                    mains.forEach(main => main.style.display = 'none');
+                    
+                    targetMain.style.display = 'flex';
+                });
+            });
             
-            const links = document.querySelectorAll('.paginas .link');
-            links.forEach(link => link.classList.remove('m-active'));
-            
-            event.currentTarget.classList.add('m-active');
-            
-            const sections = document.querySelectorAll('main section');
-            sections.forEach(section => section.style.display = 'none');
-            
-            document.getElementById(name).style.display = 'flex';
-            
-        }
-
-        function changeAboutLink(event, name) {
-            event.preventDefault();
-
-            const links = document.querySelectorAll('.sb-links .sb-link');
-            links.forEach(link => link.classList.remove('sb-active'));
-
-            event.currentTarget.classList.add('sb-active');
-
-            const sections = document.querySelectorAll('#about .main-about > div');
-            sections.forEach(section => section.style.display = 'none');
-
-            document.getElementById(name).style.display = 'block';
-        }
+            document.getElementById('main-home').style.display = 'flex';
+        });
     </script>
 </body>
-
 </html>
