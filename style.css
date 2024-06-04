@@ -1,16 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 
-/* Reset and Global Styles */
 * {
     padding: 0;
-    margin: 0 auto;
+    margin: 0;
     box-sizing: border-box;
     font-family: "Fira Code", monospace;
     color: var(--font-grey-1);
-    max-width: 1280px;
 }
 
-/* Color Variables */
 :root {
     --grey-1: #3D3D3D;
     --grey-2: #2C2C2C;
@@ -21,13 +18,16 @@
     --font-yellow: #EAAE37;
 }
 
-/* Body Style */
 body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
     background-color: var(--grey-3);
     min-height: 100vh;
+}
+
+body::-webkit-scrollbar {
+    width: 0px;
 }
 
 .activate {
@@ -36,10 +36,16 @@ body {
     font-weight: 600;
 }
 
-/* Home */
+header, main, footer {
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
 
 header {
-    width: 100%;
     height: 100px;
 }
 
@@ -47,7 +53,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 3rem;
     width: 50%;
     height: 100%;
 }
@@ -56,18 +62,16 @@ header {
     text-decoration: none;
 }
 
-/* Main Sections */
 main {
-    width: 100%;
-    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 220px);
+    display: none;
+    min-height: calc(100vh - 220px);
 }
 
 #main-home {
-    display: flex; /* Ensure the home section is displayed initially */
+    display: flex;
 }
 
 .foto-perfil {
@@ -107,9 +111,7 @@ main {
     font-style: italic;
 }
 
-/* Footer Style */
 footer {
-    width: 20%;
     height: 120px;
 }
 
@@ -124,5 +126,68 @@ footer {
 .icon img {
     width: 30px;
     height: 30px;
+}
+
+/* ABOUT */
+.about {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.about-container {
+    width: 100%;
+    padding: 10px;
+}
+
+.tittle {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.descricao {
+    font-size: 1em;
+    line-height: 1.5;
+    border-left: 1px solid;
+    padding: 0 0 1rem 1rem;
+}
+
+.progress-loader {
+    width: 150px;
+    background: rgb(91, 91, 150);
+    height: 10px;
+    border-radius: 7px;
+    position: relative;
+}
+
+.progress {
     display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 0;
+    height: 10px;
+    border-radius: 7px;
+    background: rgb(102, 4, 4);
+    transition: width 0.5s;
+    color: blueviolet;
+}
+
+.progress span {
+    position: absolute;
+    top: -20px;
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(143, 17, 17);
+}
+
+@media only screen and (max-width: 768px) {
+    .menu {
+        width: 100%;
+        gap: 2rem;
+    }
+    .about {
+        grid-template-columns: 1fr;
+    }
 }

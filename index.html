@@ -9,9 +9,9 @@
 <body>
     <header>
         <nav id="menu-header" class="menu">
-            <a href="#main-home" class="activate">Home</a>
-            <a href="#main-about">About</a>
-            <a href="#main-projects">Projects</a>
+            <a href="#main-home" class="activate">Início</a>
+            <a href="#main-about">Currículo</a>
+            <a href="#main-projects">Projetos</a>
         </nav>
     </header>
 
@@ -22,12 +22,76 @@
         <section class="hello">
             <h2>Hello, I am</h2>
             <h1>Gabriel Gontijo</h1>
-            <h3>Full Stack Developer</h3>
+            <h3>I am, Full-Stack Developer</h3>
         </section>
     </main>
 
     <main id="main-about">
-        <h1>ABOUT</h1>
+        <section class="about">
+            <div class="about-container">
+                <h1 class="tittle">Sobre</h1>
+                <p class="descricao">
+                    Meu nome é Gabriel, tenho 25 anos e sou desenvolvedor full-stack. Estou em busca de novas oportunidades profissionais. Atualmente, sou estagiário na Defensoria Pública do Distrito Federal, onde estou aprimorando minhas habilidades em desenvolvimento de sistemas e contribuindo para projetos significativos. <br>
+                    Meu foco está no desenvolvimento com Python e Django REST Framework
+                </p>
+            </div>
+            <div class="about-container">
+                <h1 class="tittle">Acadêmico</h1>
+                <p class="descricao">
+                    2022 - 2024 <br>
+                     Graduação | UNICEUB <br>
+                    * Superior em Banco de Dados <br>
+                    2024 - Atual <br>
+                    Pós Graduação | Gran Cursos <br>
+                    * Desenvolvimento e Testes de Software<br>
+                </p>
+            </div>
+            <div class="about-container">
+                <h1 class="tittle">Experiência</h1>
+                <p class="descricao">
+                    Defensoria Pública do Distrito Federal <br>
+                    Desenvolvedor Full-Stack <br>
+                    Estágio | 2023/08 - Atual <br>
+                    Estagiário de Desenvolvimento Python com experiência na criação e edição de endpoints no framework Django, com uso do Swagger para documentação. Trabalhando em um ambiente colaborativo com a metodologia Scrum.
+                </p>
+            </div>
+            <div class="about-container">
+                <h1 class="tittle">Skills</h1>
+                <div class="descricao">
+                    
+                    <div class="progress-loader">
+                        <div class="progress" data-progress="50"><span>50%</span></div>
+                    </div>
+                </div>
+                
+                <div class="descricao">
+                    <div class="progress-loader">
+                        <div class="progress" data-progress="70"><span>70%</span></div>
+                    </div>
+                </div>
+                
+                <div class="descricao">
+                    <div class="progress-loader">
+                        <div class="progress" data-progress="60"><span>60%</span></div>
+                    </div>
+                </div>
+
+                <div class="descricao">
+                    <div class="progress-loader">
+                        <div class="progress" data-progress="90"><span>90%</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-container">
+                <h1 class="tittle">Contato</h1>
+                <p class="descricao">
+                    Brasília, DF <br>
+                    (61) 98207-3938 <br>
+                    gontijogabr@gmail.com
+                </p>
+            </div>
+        </section>
     </main>
 
     <main id="main-projects">
@@ -36,44 +100,21 @@
 
     <footer>
         <div class="sociais">
-            <div class="icon">
-                <img src="img/icons/linkedin_icon.svg" alt="LinkedIn Icon">
-            </div>
-            <div class="icon">
-                <img src="img/icons/github_icon.svg" alt="GitHub Icon">
-            </div>
-            <div class="icon">
-                <img src="img/icons/gmail-icon.svg" alt="Gmail Icon">
-            </div>
-            <div class="icon">
-                <img src="img/icons/whatsapp_icon.svg" alt="WhatsApp Icon">
-            </div>
+            <a href="https://www.linkedin.com/in/gontijogabriel/" target="_blank" class="icon">
+                <img src="icons/linkedin_icon.svg" alt="LinkedIn Icon">
+            </a>
+            <a href="https://github.com/gontijogabriel" target="_blank" class="icon">
+                <img src="icons/github_icon.svg" alt="GitHub Icon">
+            </a>
+            <a href="mailto:gontijogabr@gmail.com" target="_blank" class="icon">
+                <img src="icons/gmail-icon.svg" alt="Gmail Icon">
+            </a>
+            <a href="https://wa.me/61982073938" target="_blank" class="icon">
+                <img src="icons/whatsapp_icon.svg" alt="WhatsApp Icon">
+            </a>
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuLinks = document.querySelectorAll('#menu-header a');
-            const mains = document.querySelectorAll('main');
-
-            menuLinks.forEach(link => {
-                link.addEventListener('click', function(event) {
-                    event.preventDefault();
-                    const targetId = this.getAttribute('href').substring(1);
-                    const targetMain = document.getElementById(targetId);
-
-                    menuLinks.forEach(link => link.classList.remove('activate'));
-
-                    this.classList.add('activate');
-                   
-                    mains.forEach(main => main.style.display = 'none');
-                    
-                    targetMain.style.display = 'flex';
-                });
-            });
-            
-            document.getElementById('main-home').style.display = 'flex';
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
