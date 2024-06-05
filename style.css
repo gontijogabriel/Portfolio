@@ -147,11 +147,19 @@ footer {
     margin-bottom: 5px;
 }
 
+.icon {
+    width: 50px;
+}
+
 .descricao {
     font-size: 1em;
     line-height: 1.5;
     border-left: 1px solid;
     padding: 0 0 1rem 1rem;
+    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .progress-loader {

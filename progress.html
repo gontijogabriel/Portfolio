@@ -8,6 +8,22 @@
         body {
             margin: 50px auto;
         }
+
+        .icon {
+            width: 50px;
+        }
+
+        .descricao {
+            font-size: 1em;
+            line-height: 1.5;
+            border-left: 1px solid;
+            padding: 0 0 1rem 1rem;
+            background-color: aquamarine;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
         .progress-loader {
             width: 150px;
             background: rgb(91, 91, 150);
@@ -38,9 +54,27 @@
     </style>
 </head>
 <body>
-    <div class="progress-loader">
-        <div class="progress" data-progress="50"><span>50%</span></div>
+    <div class="descricao">
+        <img src="icons/icons8-html-144.png" class="icon" alt="">
+        <div class="progress-loader">
+            <div class="progress" data-progress="50"><span>50%</span></div>
+        </div>
     </div>
+
+    <div class="descricao">
+        <img src="icons/icons8-css-144.png" class="icon" alt="">
+        <div class="progress-loader">
+            <div class="progress" data-progress="90"><span>90%</span></div>
+        </div>
+    </div>
+
+    <div class="descricao">
+        <img src="icons/javascripticon.png" class="icon" alt="">
+        <div class="progress-loader">
+            <div class="progress" data-progress="50"><span>50%</span></div>
+        </div>
+    </div>
+
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
