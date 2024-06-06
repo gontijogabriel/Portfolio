@@ -129,28 +129,31 @@ footer {
 }
 
 /* ABOUT */
-.about {
+#main-about {
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    padding: 20px;
+    align-items: start;
+    flex-direction: row;
+}
+.about {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    padding: 10px;
 }
 
 .about-container {
     width: 100%;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
 }
 
 .tittle {
     font-size: 1.5em;
     margin-bottom: 5px;
-}
-
-.skills-container {
-    display: grid;
-    
-    grid-template-columns: 1fr 1fr;
 }
 
 .icon {
@@ -163,13 +166,30 @@ footer {
     border-left: 1px solid;
     padding: 0 0 1rem 1rem;
     display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.desc-skills {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.section-descricao {
+    width: 50%;
+}
+
+.skill {
+    display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    height: 50px;
 }
 
 .progress-loader {
-    width: 150px;
-    background: rgb(91, 91, 150);
+    width: 100%;
     height: 10px;
     border-radius: 7px;
     position: relative;
@@ -182,9 +202,8 @@ footer {
     width: 0;
     height: 10px;
     border-radius: 7px;
-    background: rgb(102, 4, 4);
+    background: var(--font-grey-1);
     transition: width 0.5s;
-    color: blueviolet;
 }
 
 .progress span {
@@ -192,13 +211,15 @@ footer {
     top: -20px;
     font-size: 14px;
     font-weight: 700;
-    color: rgb(143, 17, 17);
 }
 
 @media only screen and (max-width: 768px) {
     .menu {
         width: 100%;
         gap: 2rem;
+    }
+    #main-about {
+        flex-direction: column;
     }
     .about {
         grid-template-columns: 1fr;
