@@ -21,8 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('main-home').style.display = 'flex';
 });
 
-
-
 document.addEventListener('DOMContentLoaded', function() {
     const progressElements = document.querySelectorAll('.progress');
     progressElements.forEach(progressElement => {
