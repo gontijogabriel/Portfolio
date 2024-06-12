@@ -21,12 +21,20 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('main-home').style.display = 'flex';
 });
 
-
-
 document.addEventListener('DOMContentLoaded', function() {
     const progressElements = document.querySelectorAll('.progress');
     progressElements.forEach(progressElement => {
         const progressValue = progressElement.getAttribute('data-progress');
         progressElement.style.width = progressValue + '%';
     });
+});
+
+document.getElementById('download-cv').addEventListener('click', function() {
+    var pdfUrl = 'gabriel-gontijo-cv-12-06.pdf';
+    var link = document.createElement('a');
+    link.href = pdfUrl;
+    link.download = 'gabriel-gontijo-cv.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 });
