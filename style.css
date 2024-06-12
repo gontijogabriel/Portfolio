@@ -68,7 +68,7 @@ main {
     align-items: center;
     justify-content: center;
     display: none;
-    min-height: calc(100vh - 220px);
+    min-height: calc(100vh - 170px);
 }
 
 #main-home {
@@ -116,9 +116,9 @@ main {
     font-style: italic;
 }
 
-footer {
+/* footer {
     height: 120px;
-}
+} */
 
 .sociais {
     display: flex;
@@ -242,9 +242,16 @@ footer {
 }
 
 .project-img {
-    min-width: 300px;
-    min-height: 200px;
-    background-color: #AAAAAC;
+    width: 50%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.project-img img {
+    max-width: 100px;
 }
 
 .project-descricao {
@@ -253,14 +260,21 @@ footer {
 
 .download {
     width: min-content;
-    padding: 4px;
+    padding: 7px;
     display: flex;
+    gap: 0.5rem;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
     background-color: var(--grey-1);
     border-radius: 10px;
     cursor: pointer;
+    position: fixed;
+    right: 50px;
+    bottom: 30px;
+    z-index: 100;
+}
+.download img {
+    width: 45px;
 }
 .download:hover {
     background-color: var(--grey-2);
