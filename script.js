@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.getElementById('download-cv').addEventListener('click', function() {
-    var pdfUrl = 'GabrielGontijoPessoaMelo_cv';
+    var pdfUrl = 'GabrielGontijoPessoaMelo_cv.pdf';
     var link = document.createElement('a');
     link.href = pdfUrl;
     link.download = 'gabriel-gontijo-cv.pdf';
