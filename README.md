@@ -1,32 +1,36 @@
-### Descrição do Portfólio
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Bem-vindo ao meu portfólio. Sou desenvolvedor full-stack apaixonado por criar soluções tecnológicas e inovadoras. Aqui você encontrará uma visão abrangente das minhas habilidades, experiências e projetos que demonstram minha capacidade de transformar ideias em realidade através do código.
+## Getting Started
 
-#### Seções do Portfólio
+First, run the development server:
 
-1. **Início**
-   - Uma introdução calorosa que apresenta quem sou, destacando minha trajetória e minha paixão pelo desenvolvimento de software.
-   - Uma foto de perfil profissional para criar uma conexão visual imediata.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-2. **Currículo**
-   - **Sobre**: Uma breve biografia onde compartilho minha jornada como desenvolvedor, incluindo minha atual posição como estagiário na Defensoria Pública do Distrito Federal.
-   - **Acadêmico**: Minha formação educacional detalhada, destacando minha graduação em Banco de Dados pela UNICEUB e minha pós-graduação em Desenvolvimento e Testes de Software pela Gran Cursos.
-   - **Contato**: Informações de contato para facilitar a comunicação, incluindo localização, número de telefone e e-mail.
-   - **Experiência**: Um resumo das minhas experiências profissionais, com ênfase nas minhas responsabilidades e realizações como desenvolvedor full-stack.
-   - **Skills**: Uma apresentação visual das minhas habilidades técnicas, com um foco em backend (Python, Django, Flask) e frontend (HTML, CSS, JavaScript, React, TypeScript), incluindo barras de progresso que ilustram meu nível de proficiência em cada tecnologia.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-3. **Projetos**
-   - **React DRF Auth**: Um exemplo prático do meu trabalho, combinando React no frontend e Django REST Framework no backend, tudo empacotado em contêineres Docker para desenvolvimento e implantação eficientes. Este projeto demonstra minha capacidade de integrar e implementar soluções completas de autenticação para aplicações web.
+You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-#### Contato e Redes Sociais
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-Além de explorar meu portfólio, você pode me encontrar e se conectar comigo através das minhas redes sociais e e-mail. Sinta-se à vontade para me enviar uma mensagem no LinkedIn, ver meu trabalho no GitHub, ou iniciar uma conversa pelo WhatsApp.
+## Learn More
 
-#### Conclusão
+To learn more about Next.js, take a look at the following resources:
 
-Este portfólio foi criado para fornecer uma visão clara e detalhada das minhas habilidades e experiências como desenvolvedor. Espero que você aprecie meu trabalho tanto quanto eu apreciei criá-lo. Estou sempre aberto a novas oportunidades e desafios, então não hesite em entrar em contato para discutir como podemos colaborar.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
----
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-Gabriel Gontijo
-Desenvolvedor Full-Stack
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
