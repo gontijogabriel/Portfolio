@@ -1,26 +1,66 @@
 
 
 const Home = () => {
+    const Skills = {
+        frontend: ['React', 'Tailwind', 'HTML', 'CSS', 'JavaScript'],
+        backend: ['Python', 'Django', 'Django REST Framework', 'Flask'],
+        database: ['Postgres', 'MySQL', 'SQLServer'],
+        devops: ['Linux', 'Git'],
+    }
 
     return (
-        <section>
-            <div class="max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+        <section className="container mx-auto">
+            <div class="max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16 sm:mt-28 mt-10">
                 <div class="grid grid-cols-1 gap-y-8 lg:grid-cols-2 lg:items-center lg:gap-x-16">
                     <div class="mx-auto max-w-lg text-center lg:mx-0 ltr:lg:text-left rtl:lg:text-right">
-                        <h2 class="text-3xl font-bold sm:text-4xl">Find your career path</h2>
 
-                        <p class="mt-4 text-gray-600">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut vero aliquid sint distinctio
-                            iure ipsum cupiditate? Quis, odit assumenda? Deleniti quasi inventore, libero reiciendis
-                            minima aliquid tempora. Obcaecati, autem.
-                        </p>
+                        <div className="flex flex-col items-center justify-center">
+                            <img
+                                alt="Gabriel Gontijo"
+                                src="https://media.licdn.com/dms/image/v2/D4D03AQGta27cWiG5PA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1683504701308?e=1730937600&v=beta&t=2x5uu65w-HTKNdwiYELu1GyJmApEC2Cx0vqm4X_rmdU"
+                                className="w-40 h-40 sm:w-56 sm:h-56 object-cover rounded-full bg-gradient-to-r p-1"
+                            />
 
-                        <a
-                            href="#"
-                            class="mt-8 inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
-                        >
-                            Get Started Today
-                        </a>
+                            <h2 class="text-3xl mt-2 font-bold sm:text-4xl">Gabriel Gontijo</h2>
+
+                            <p class="mt-2 text-gray-700 font-bold">
+                                Full Stack
+                            </p>
+
+                            <div>
+                                <span className="flex flex-wrap gap-1 mt-2 justify-center">
+                                    {Skills.frontend.map((skill) => (
+                                        <span className="whitespace-nowrap rounded-full text-gray-700 px-2.5 font-bold py-0.5 text-xs bg-gray-400">
+                                            {skill}
+                                        </span>
+                                    ))}
+                                </span>
+
+                                <span className="flex flex-wrap gap-1 mt-2 justify-center">
+                                    {Skills.backend.map((skill) => (
+                                        <span className="whitespace-nowrap rounded-full text-gray-700 px-2.5 font-bold py-0.5 text-xs bg-gray-400">
+                                            {skill}
+                                        </span>
+                                    ))}
+                                </span>
+
+                                <span className="flex flex-wrap gap-1 mt-2 justify-center">
+                                    {Skills.database.map((skill) => (
+                                        <span className="whitespace-nowrap rounded-full text-gray-700 px-2.5 font-bold py-0.5 text-xs bg-gray-400">
+                                            {skill}
+                                        </span>
+                                    ))}
+                                </span>
+
+                                <span className="flex flex-wrap gap-1 mt-2 justify-center">
+                                    {Skills.devops.map((skill) => (
+                                        <span className="whitespace-nowrap rounded-full text-gray-700 px-2.5 font-bold py-0.5 text-xs bg-gray-400">
+                                            {skill}
+                                        </span>
+                                    ))}
+                                </span>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">

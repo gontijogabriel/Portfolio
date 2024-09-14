@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <video
+        {/* <video
           autoPlay
           loop
           muted
@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
         >
           <source src="/stars.mp4" type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
+        </video> */}
         {children}
       </body>
     </html>
