@@ -19,9 +19,9 @@ export default function Home() {
     {
       id: 1,
       name: 'DevHub (Em Desenvolvimento)',
-      description: 'Plataforma para conectar desenvolvedores',
+      description: 'Link rápido para desenvolvedores',
       icon: <IoLogoGithub size={40} />,
-      link: 'https://github.com/gontijogabriel/react-drf-auth',
+      link: '#',
       languages: ['React', 'Django REST Framework'],
     },
     {
@@ -29,7 +29,7 @@ export default function Home() {
       name: 'React DRF Auth',
       description: 'Projeto para estudo de autenticação utilizando react no frontend com nextauth.js e django rest framework com token jwt',
       icon: <IoLogoGithub size={40} />,
-      link: 'https://www.devhub.app.br',
+      link: 'https://github.com/gontijogabriel/react-drf-auth',
       languages: ['React', 'NextAuth.js', 'Django REST Framework', 'JWT'],
     }
   ]
