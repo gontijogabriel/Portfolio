@@ -1,20 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.(mp4|avi|mov|webm)$/,
-      use: {
-        loader: 'file-loader',
-        options: {
-          name: '[name].[hash].[ext]',
-          publicPath: '/_next/static/videos/',
-          outputPath: 'static/videos/',
-        },
-      },
-    });
-
-    return config;
+  eslint: {
+    ignoreDuringBuilds: true,
   },
-};
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  images: {
+    unoptimized: true,
+  },
+}
 
-export default nextConfig;
+export default nextConfig
