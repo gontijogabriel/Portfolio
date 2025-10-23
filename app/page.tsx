@@ -188,7 +188,7 @@ export default function Home() {
                         <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1">
                             <img
                                 alt="Gabriel Gontijo"
-                                src="https://media.licdn.com/dms/image/v2/D4D03AQGta27cWiG5PA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1683504701308?e=1754524800&v=beta&t=0JYlcQuPweyqp0nBuNyG9oDkpSTysxC-_llpqX7de2g"
+                                src="./foto_de_perfil.jpeg"
                                 className="w-full h-full object-cover rounded-full"
                             />
                         </div>
